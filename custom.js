@@ -13,7 +13,7 @@ $(function () {
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
-        var markerImage = 'assetss/marker.png';
+        var markerImage = 'assets/marker.png';
 
         var marker = new google.maps.Marker({
             position: location,
