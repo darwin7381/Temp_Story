@@ -1,7 +1,6 @@
 $(function () {
 
     function initMap() {
-
         var location = new google.maps.LatLng(24.987620, 121.572235);
 
         var mapCanvas = document.getElementById('map');
