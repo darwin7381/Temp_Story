@@ -3,6 +3,10 @@ body {
     color: #fff;
 }
 
+* {
+	transition-duration: 0.7s;
+}
+
 h1{
     text-transform: uppercase;
 
@@ -49,6 +53,7 @@ section {
 	vertical-align: top;
 	border: solid 1px black;
 	width: 50%;
+	transition-duration: 0.7s;
 }
 
 .header {
@@ -71,6 +76,7 @@ section {
 	padding-left: 2px;
 	padding-right: 2px;
 	z-index: 2;
+
 }
 .map {
 	width: 100%;
@@ -80,22 +86,101 @@ section {
 
 .content {
 	text-align: center;
+	margin-bottom: 45px;
+}
+
+.mark {
+	background-color: #FFED97;
+	height: 30px;
+	width: 100%;
+	position: fixed;
+	bottom: 3%;
+	z-index: 5;
+	background-color: transparent;
+}
+.comment {
+	background-color: #FFED97;
+	border-radius: 4px;
+	display: block;
+	border: solid 2px black;
+	position: absolute;
+	top: 0px;
+	height: 40px;
+	width: 20%;
+	left: 7%;
+	padding: 15px;
+	color: gray;
+}
+.like {
+	background-color: #FFED97;
+	border-radius: 4px;
+	display: block;
+	border: solid 2px black;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	left: 2%;
+	top: 0px;
+
+}
+
+.like img {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	display: table-cell;
+	text-align: cneter;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.type {
+	/*background-color: white;*/
+	/*display: block;*/
+	/*margin-top: 1%;*/
+	/*margin-bottom: 3%;*/
+	border-radius: 4px;
+	vertical-align: middle;
+	width: 90%;
+	height: 80%;
+	border: solid 0.5px gray;
+	position: absolute;
+	top: 3px;
 }
 
 .arrow {
 	position: fixed;
 	border: solid 1px black;
-	background-color: rgb(0,0,0);
-	width: 50px;
-	height: 50px;
+	background-color: rgba(0,0,0,.7);
+	width: 51px;
+	height: 51px;
 	border-radius: 100%;
 	left: 28%;
 	top: 50%;
 	text-align: center;
 	font-size: 37px;
 	z-index: 99999;
+	cursor: pointer;
+
 }
 
+/*.arrow:before, .arrow:after {
+	content: "";
+	border: solid 1px white;
+	position: fixed;
+	background-color: #fff;
+	width: 40px;
+	height: 10px;
+	left: 50%;
+	top: 50%;
+	z-index: 99999999;
+	display: block;
+	transform: translate(0,-100%) rotate(45deg);
+}
+.arrow:after {
+	transform: rotate(-45deg);	
+}
+*/
 .bar {
 	display: block;
 	position: absolute;
@@ -122,7 +207,8 @@ section {
 
 .cblock {
 	display: inline-block;
-	border: solid 1px black;
+	padding: 5px;
+	/*border: solid 1px black;*/
 	height: 100%;
 	width: 23%;
 	margin: auto;
@@ -130,6 +216,9 @@ section {
 }
 .cb1 {
 	background-color: rgba(0, 0, 255, .7);
+}
+.cb2 {
+	background-color: ;
 }
 .line {
 	border-bottom: solid 3px black;
