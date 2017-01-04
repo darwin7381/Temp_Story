@@ -12,6 +12,8 @@
     
     </head>
     <body>
+
+        <div class="arrow"><p>></p></div>
         
         <section class="header">
             <h1 align='center'>溫度的故事</h1>
@@ -44,8 +46,40 @@
         </section>
 
         <section class="map">
+
             <div id="map"></div>
-        </section>
+
+            <div class="site">
+
+                <div class="bar timebar">
+                    <div class="line"></div>
+                </div>
+
+                <div class="bar colorbar">
+                    <div class="cblock cb1"></div>
+                    <div class="cblock cb2"></div>
+                    <div class="cblock cb3"></div>
+                    <div class="cblock cb4"></div>
+                </div>
+
+                <div class="add"></div>
+
+            </div>
+
+        
+        <!-- firebase script -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyASwAm86mSJ3Egs28fuwa5frzyc66ofJQU",
+            authDomain: "temstory101.firebaseapp.com",
+            databaseURL: "https://temstory101.firebaseio.com",
+            storageBucket: "temstory101.appspot.com",
+            messagingSenderId: "866609204456"
+          };
+          firebase.initializeApp(config);
+        </script>
 
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
