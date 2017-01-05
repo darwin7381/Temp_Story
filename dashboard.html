@@ -40,10 +40,10 @@
 
                     <div class="col-lg-8 col-lg-offset-2">
 
-                        <h1>溫 度 的 故 事
-                        <hr><a href="#">Temperature Story</a></h1>
+                        <h1>華 慧 花 坊
+                        <hr><a href="#">寒冷的故事</a></h1>
 
-                        <p class="lead">讓你和世界更近，近到能感覺到溫度</p>
+                        <p class="lead" id = "place"></p>
 
                         <p id="content"></p>
                     </div><!-- /.8 -->
@@ -90,8 +90,12 @@
           firebase.initializeApp(config);
 
           var content = document.getElementById("content");
-          var dbRef = firebase.database().ref().child("story/華慧花坊/main_story");
-          dbRef.on("value", snap => content.innerText = snap.val());
+          var dbRef_content = firebase.database().ref().child("story/華慧花坊/main_story");
+          dbRef_content.on("value", snap => content.innerText = snap.val());
+
+          var place = document.getElementById("place");
+          var dbRef_place = firebase.database().ref().child("story/華慧花坊/place");
+          dbRef_place.on("value", snap => place.innerText = snap.val());
         </script>
 
 
