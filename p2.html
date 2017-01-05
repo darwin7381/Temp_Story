@@ -7,14 +7,14 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         
         <!-- build:css -->
-        <link href='css/dash.css' rel='stylesheet' type='text/css'>
+        <link href='css/p2.css' rel='stylesheet' type='text/css'>
         <!-- endbuild -->
     
     </head>
     <body>
 
         <div class="arrow">
-            <p>></p>
+            <p><</p>
         </div>
         <div class="sitemark s1">
             <img src="assets/markerr.png" alt="">
@@ -73,7 +73,7 @@
                         <p class="lead" id = "place"></p>
 
                         <p id="content"></p>
-                        <img class = "image" src = "assets/flower_shop.png" alt="">
+                        <img class = "image" src = "assets/flower.jpg" alt="">
                     </div><!-- /.8 -->
 
                 </div> <!-- /.row-->
@@ -118,7 +118,7 @@
           firebase.initializeApp(config);
 
           var content = document.getElementById("content");
-          var dbRef_content = firebase.database().ref().child("story/華慧花坊/main_story");
+          var dbRef_content = firebase.database().ref().child("story/華慧花坊/continue/0");
           dbRef_content.on("value", snap => content.innerText = snap.val());
 
           var place = document.getElementById("place");
@@ -130,6 +130,6 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpn5IBH6kh7nAAA4un4QLqyxl-fIXEvP0"></script>
-        <script src="js/dash.js"></script>
+        <script src="js/p2.js"></script>
     </body>
 </html>

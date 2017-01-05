@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
-	
+
 
 h1{
     text-transform: uppercase;
@@ -33,6 +33,7 @@ h3 {
     height: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
+
 }
 
 .info-window {
@@ -66,18 +67,18 @@ section {
 .story {
 	position: absolute;
 	top: 8%;
-	width: 30%;
+	width: 90%;
 	left: 0px;
 	box-sizing: border-box;
 	height: 92%;
 	overflow: auto;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.8);
 	padding: 30px;
 	padding-left: 2px;
 	padding-right: 2px;
 	z-index: 5;
 	transition-duration: 0.7s;
-	letter-spacing: 10px;
+
 }
 .map {
 	width: 100%;
@@ -103,7 +104,7 @@ section {
 	transition-duration: 0.7s;
 }
 .comment {
-	background-color: rgb(200,200,200);;
+	background-color: #FFED97;
 	border-radius: 4px;
 	display: block;
 	border: solid 2px black;
@@ -117,7 +118,7 @@ section {
 	transition-duration: 0.7s;
 }
 .like {
-	background-color: rgb(200,200,200);
+	background-color: #FFED97;
 	border-radius: 4px;
 	display: block;
 	border: solid 2px black;
@@ -161,7 +162,7 @@ section {
 	width: 51px;
 	height: 51px;
 	border-radius: 100%;
-	left: 28%;
+	left: 88%;
 	top: 50%;
 	text-align: center;
 	font-size: 37px;
@@ -254,10 +255,11 @@ section {
 	position: fixed;
 	border: solid 1px gray;
 	background-color: #eeeeee;
+	left: 85%;
 	width: 70px;
 	height: 50px;
 	z-index: 50;
-	display: none;
+	display: block;
 }
 .bk1 {
 	top: 56%;
