@@ -12,7 +12,10 @@ $(".arrow").click(function(){
         $(".story").css("width",w);
         $(".story").css('background-color','rgba(0,0,0,.8)');
         $(".arrow").css("left",w-d);
-        $(".arrow").html("<")  
+        $(".arrow").html("<");
+        $(".comment").css("width",w/2);
+        $(".comment").css("left",w/4);
+        $(".like").css("left",(w/4)-50);
 
     }else{
 
@@ -20,7 +23,10 @@ $(".arrow").click(function(){
         $(".story").css("width","");
         $(".story").css('background-color',"");
         $(".arrow").css("left","");
-        $(".arrow").html(">") 
+        $(".arrow").html(">");
+        $(".comment").css("width","");
+        $(".comment").css("left","");
+        $(".like").css("left","");
     }
 })
 
@@ -33,14 +39,14 @@ $(function () {
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
             center: location,
-            zoom: 16,
+            zoom: 15,
             panControl: false,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
-        var markerImage = 'assets/marker.png';
+        var markerImage = 'assets/markerb.png';
 
         var marker = new google.maps.Marker({
             position: location,
