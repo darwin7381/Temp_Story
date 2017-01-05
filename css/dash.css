@@ -76,7 +76,7 @@ section {
 	padding: 30px;
 	padding-left: 2px;
 	padding-right: 2px;
-	z-index: 2;
+	z-index: 5;
 	transition-duration: 0.7s;
 
 }
@@ -262,7 +262,7 @@ section {
 }
 .sitemark {
 	position: fixed;
-	z-index: 999000;
+	z-index: 2;
 }
 .s1 {
 	left: 70%;
