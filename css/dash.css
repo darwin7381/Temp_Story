@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #fff; }
+  color: #fff;
+  line-height: 2; }
 
 h1 {
   text-transform: uppercase;
@@ -15,7 +16,7 @@ h3 {
   text-align: left;
   display: inline;
   margin-left: 50px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #EEEEEE;
   vertical-align: middle; }
 
 .info-window {
@@ -32,7 +33,7 @@ section {
   transition-duration: 0.7s; }
 
 .header {
-  background-color: #003D79;
+  background-color: #234C63;
   width: 100%;
   height: 8%;
   padding: 15px;
@@ -40,13 +41,42 @@ section {
   .header h1 {
     color: #FFC85B; }
 
+.temperature {
+  display: block;
+  position: fixed;
+  border: solid 1px gray;
+  top: 11%;
+  left: 1%;
+  width: 25px;
+  height: 200px;
+  background: -webkit-linear-gradient(top, #00007a, yellow);
+  z-index: 999;
+  cursor: pointer; }
+
+.arrow {
+  position: fixed;
+  border: solid 1px black;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+  left: 30%;
+  top: 50%;
+  text-align: center;
+  font-size: 37px;
+  z-index: 99999;
+  cursor: pointer;
+  transition-duration: 0.7s;
+  line-height: 1.5; }
+
 .story {
   position: absolute;
-  top: 8%;
-  width: 30%;
-  left: 0%;
+  border-radius: 5px;
+  top: 11%;
+  width: 28%;
+  left: 4%;
   box-sizing: border-box;
-  height: 90%;
+  height: 83%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
@@ -56,35 +86,23 @@ section {
   transition-duration: 0.7s;
   letter-spacing: 10px;
   -webkit-box-shadow: 15px 15px 35px gray; }
-  .story .temperature {
-    display: block;
-    position: fixed;
-    border: solid 1px gray;
-    top: 10%;
-    left: 2%;
-    width: 25px;
-    height: 200px;
-    background: -webkit-linear-gradient(top, #00007a, yellow);
-    z-index: 99999;
-    cursor: pointer; }
   .story .mark {
     background-color: #FFED97;
     height: 30px;
     width: 100%;
     position: fixed;
-    bottom: 5%;
+    bottom: 8%;
     z-index: 5;
     background-color: transparent;
     transition-duration: 0.7s; }
     .story .mark .like {
-      background-color: #c8c8c8;
+      background-color: #FFC85B;
       border-radius: 4px;
       display: block;
-      border: solid 2px black;
       position: absolute;
       height: 40px;
       width: 40px;
-      left: 2%;
+      left: 1%;
       top: 0px;
       transition-duration: 0.7s; }
       .story .mark .like img {
@@ -96,15 +114,14 @@ section {
         vertical-align: middle;
         cursor: pointer; }
     .story .mark .comment {
-      background-color: #c8c8c8;
+      background-color: #FFC85B;
       border-radius: 4px;
       display: block;
-      border: solid 2px black;
       position: absolute;
       top: 0px;
       height: 40px;
       width: 20%;
-      left: 7%;
+      left: 5%;
       padding: 15px;
       color: gray;
       transition-duration: 0.7s; }
@@ -131,9 +148,9 @@ section {
     height: 45px;
     transition: translate(-50%, -50%);
     z-index: 1;
-    left: 35%; }
+    left: 35%;
+    -webkit-box-shadow: 5px 5px 20px #afafaf; }
   .map .timebar {
-    border: solid 0.5px gray;
     border-radius: 4px;
     top: 35px; }
     .map .timebar .line {
@@ -145,7 +162,6 @@ section {
       width: 90%; }
   .map .colorbar {
     bottom: 35px;
-    border: solid 0.5px gray;
     border-radius: 4px;
     cursor: pointer; }
     .map .colorbar .cblock {
@@ -183,21 +199,6 @@ section {
   border: solid 0.5px gray;
   position: absolute;
   top: 4.5px; }
-
-.arrow {
-  position: fixed;
-  border: solid 1px black;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 51px;
-  height: 51px;
-  border-radius: 100%;
-  left: 28%;
-  top: 50%;
-  text-align: center;
-  font-size: 37px;
-  z-index: 99999;
-  cursor: pointer;
-  transition-duration: 0.7s; }
 
 /*.arrow:before, .arrow:after {
   content: "";

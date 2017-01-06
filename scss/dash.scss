@@ -1,6 +1,17 @@
+$gray: #EEEEEE;
+$blue: #234C63;
+$green: #379956;
+$yellow: #FFC85B;
+$bgt: rgba(0, 0, 0, 0.5);
+
+@mixin shadow {
+    -webkit-box-shadow: 15px 15px 35px gray;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
+    line-height: 2;
 }
 
 h1 {
@@ -17,7 +28,7 @@ h3 {
     text-align: left;
     display: inline;
     margin-left: 50px;
-    color: rgba(255, 255, 255, 0.8);
+    color: $gray;
     vertical-align: middle;
 }
 
@@ -39,66 +50,87 @@ section {
 }
 
 .header {
-    background-color: #003D79;
+    background-color: $blue;
     width: 100%;
     height: 8%;
     padding: 15px;
     z-index: 1;
 
     h1 {
-        color: #FFC85B;
+        color: $yellow;
     }
+}
+
+.temperature {
+    display: block;
+    position: fixed;
+    border: solid 1px gray;
+    top: 11%;
+    left: 1%;
+    width: 25px;
+    height: 200px;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 122, 1), rgba(255, 255, 0, 1));
+    z-index: 999;
+    cursor: pointer;
+}
+
+.arrow {
+    position: fixed;
+    border: solid 1px black;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    left: 30%;
+    top: 50%;
+    text-align: center;
+    font-size: 37px;
+    z-index: 99999;
+    cursor: pointer;
+    transition-duration: 0.7s;
+    line-height: 1.5;
 }
 
 .story {
     position: absolute;
-    top: 8%;
-    width: 30%;
-    left: 0%;
+    border-radius: 5px;
+    top: 11%;
+    width: 28%;
+    left: 4%;
     box-sizing: border-box;
-    height: 90%;
+    height: 83%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $bgt;
     padding: 30px;
     padding-left: 2px;
     padding-right: 2px;
     z-index: 5;
     transition-duration: 0.7s;
     letter-spacing: 10px;
-    -webkit-box-shadow: 15px 15px 35px gray;
 
-    .temperature {
-        display: block;
-        position: fixed;
-        border: solid 1px gray;
-        top: 10%;
-        left: 2%;
-        width: 25px;
-        height: 200px;
-        background: -webkit-linear-gradient(top, rgba(0, 0, 122, 1), rgba(255, 255, 0, 1));
-        z-index: 99999;
-        cursor: pointer;
-    }
+    @include shadow;
 
     .mark {
         background-color: #FFED97;
         height: 30px;
         width: 100%;
         position: fixed;
-        bottom: 5%;
+        bottom: 8%;
         z-index: 5;
         background-color: transparent;
         transition-duration: 0.7s;
 
         .like {
-            background-color: rgb(200, 200, 200);
+            background-color: $yellow;
             border-radius: 4px;
             display: block;
-            border: solid 2px black;
+
+            // border: solid 2px black;
+            // -webkit-box-shadow: 1px 1px 3px white;
             position: absolute;
             height: 40px;
             width: 40px;
-            left: 2%;
+            left: 1%;
             top: 0px;
             transition-duration: 0.7s;
 
@@ -114,15 +146,16 @@ section {
         }
 
         .comment {
-            background-color: rgb(200, 200, 200);
+            background-color: $yellow;
             border-radius: 4px;
             display: block;
-            border: solid 2px black;
+
+            // border: solid 2px black;
             position: absolute;
             top: 0px;
             height: 40px;
             width: 20%;
-            left: 7%;
+            left: 5%;
             padding: 15px;
             color: gray;
             transition-duration: 0.7s;
@@ -158,10 +191,11 @@ section {
         transition: translate(-50%, -50%);
         z-index: 1;
         left: 35%;
+        -webkit-box-shadow: 5px 5px 20px rgb(175, 175, 175);
     }
 
     .timebar {
-        border: solid 0.5px gray;
+        // border: solid 0.5px gray;
         border-radius: 4px;
         top: 35px;
 
@@ -177,7 +211,8 @@ section {
 
     .colorbar {
         bottom: 35px;
-        border: solid 0.5px gray;
+
+        // border: solid 0.5px gray;
         border-radius: 4px;
         cursor: pointer;
 
@@ -230,22 +265,6 @@ section {
     border: solid 0.5px gray;
     position: absolute;
     top: 4.5px;
-}
-
-.arrow {
-    position: fixed;
-    border: solid 1px black;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 51px;
-    height: 51px;
-    border-radius: 100%;
-    left: 28%;
-    top: 50%;
-    text-align: center;
-    font-size: 37px;
-    z-index: 99999;
-    cursor: pointer;
-    transition-duration: 0.7s;
 }
 
 /*.arrow:before, .arrow:after {
