@@ -18,17 +18,18 @@ var notify = require('gulp-notify');
 // Evil Icons
 var evilIcons = require("gulp-evil-icons");
 
-var gulpSass = require('gulp-sass'),
-    gulpUglify = require('gulp-uglify');
-    gulpCompass = require('gulp-compass');
-    gulpImagemin = require('gulp-imagemin');
+// 01/06
+var sass = require("gulp-sass");
     
 
 
-// Error Helper
-function onError(err) {
-    console.log(err);
-}
+// // Error Helper
+// .on(Error(err) {
+//     console.log(err);
+//     // gulp.pipe(notify({ message: 'Error!!!' }));
+// }
+// .on("error", notify.onError("Error: <%= error.message %>"));
+// .on('error', notify.onError(options)) // options is the same as the regular notify()
  
 // public Task
 gulp.task('public', function() {
@@ -37,6 +38,7 @@ gulp.task('public', function() {
      livereload: true
    });
 });
+
 
 
 // Html Task
@@ -69,13 +71,20 @@ gulp.task('html', function () {
 gulp.task('styles', function () {
     // gulp.src('*.scss')
     gulp.src('css/*.css')
-        .pipe(gulpSass({
-            outputStyle: 'compressed'
-        }))
+        // .pipe(gulpSass({
+        //     outputStyle: 'compressed'
+        // }))
 
         .pipe(gulp.dest('public/css'))
+        .pipe(notify({ message: 'Styles task complete' }));
 });
 
+
+gulp.task('sass', function() {
+  return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in scss and children dirs
+    .pipe(sass())
+    .pipe(gulp.dest('css'))
+})
 
 
 // // Scripts Task
@@ -94,8 +103,9 @@ gulp.task('styles', function () {
 // 使用 "gulp-uglify" 最小化 JavaScript
 gulp.task('scripts', function () {
     gulp.src('js/*.js')
-        .pipe(gulpUglify())
+        .pipe(uglify())
         .pipe(gulp.dest('public/js'))
+        .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 
@@ -109,12 +119,12 @@ gulp.task('images', function() {
         .pipe(notify({ message: 'Images task complete' }));
 });
 
-// Evil Icons
-gulp.task('evil-icons', function () {
-  return gulp.src('*.html')
-    .pipe(evilIcons())
-    .pipe(gulp.dest('public'));
-});
+// // Evil Icons
+// gulp.task('evil-icons', function () {
+//   return gulp.src('*.html')
+//     .pipe(evilIcons())
+//     .pipe(gulp.dest('public'));
+// });
  
  
 // Clean Task
@@ -126,9 +136,10 @@ gulp.task('clean', function() {
 // Watch Task
 gulp.task('watch', function() {
     gulp.watch('*.html', ['html']);
-    gulp.watch('css/*.css', ['styles']);
-    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('css/**/*.css', ['styles']);
+    gulp.watch('js/**/*.js', ['scripts']);
     gulp.watch('assets/*', ['images']);
+    gulp.watch('scss/**/*.scss',['sass'])
  
     // Watch any files in public/, reload on change
     livereload.listen();
@@ -137,4 +148,4 @@ gulp.task('watch', function() {
  
 // Default Task
 gulp.task('default', ['clean', 'html', 'styles', 'scripts', 
-                     'images', 'public', 'watch', 'evil-icons']);
+                     'images', 'public', 'watch']);

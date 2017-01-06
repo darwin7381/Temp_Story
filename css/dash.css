@@ -37,6 +37,7 @@ h3 {
 
 .info-window {
     font-family: 'Montserrat', sans-serif;
+    z-index: 999;
 }
 
 .info-content {

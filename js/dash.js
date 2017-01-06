@@ -58,10 +58,10 @@ $(function () {
         });
         
         var contentString = '<div class="info-window">' +
-                '<h2><font color="black">華慧愛心花坊</font></h2>' +
+                '<h2><font color="black">華慧花坊</font></h2>' +
                 '<div class="info-content">' +
-                '<p>在木新路上的一家不起眼的花店，卻有著非常特別感動的故事...</p>' +
-                '</div>' +卻有著非常感人的故事
+                '<p>在木新路上的一家不起眼的花店...</p>' +
+                '</div>' +
                 '</div>';
 
         var infowindow = new google.maps.InfoWindow({
