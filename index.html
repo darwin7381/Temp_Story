@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>溫度的故事  -- Temperature Story</title>
+        <title>溫度的故事  -- Stay See</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -9,127 +9,110 @@
         <!-- build:css -->
         <link href='css/dash.css' rel='stylesheet' type='text/css'>
         <!-- endbuild -->
-    
+        
     </head>
     <body>
-
         <div class="arrow">
             <p>></p>
         </div>
-        <div class="sitemark s1">
-            <img src="assets/markerr.png" alt="">
+        <div class="sitemark">
+            <div class="s1">
+                <img src="assets/markerr.png" alt="">
+            </div>
+            <div class="s2">
+                <img src="assets/markerr.png" alt="">
+            </div>
+            <div class="s3">
+                <img src="assets/markery.png" alt="">
+            </div>
+            <div class="s4">
+                <img src="assets/markery.png" alt="">
+            </div>
+            <div class="s5">
+                <img src="assets/markerr.png" alt="">
+            </div>
+            <div class="s6">
+                <img src="assets/markerb.png" alt="">
+            </div>
         </div>
-        <div class="sitemark s2">
-            <img src="assets/markerr.png" alt="">
+        <div class="bookmark">
+            <div class="bk bk1"><a href="index.html">Back</a></div>
+            <div class="bk bk2"><a href="p2.html">2016/11</a></div>
+            <div class="bk bk3"><a href="p2.html">2016/10</a></div>
+            <div class="bk bk4"><a href="p2.html">2016/09</a></div>
+            <div class="bk bk5"><a href="p2.html">2016/08</a></div>
+            <div class="bk bk6"><a href="p2.html">2016/07</a></div>
+            
         </div>
-        <div class="sitemark s3">
-            <img src="assets/markery.png" alt="">
-        </div>
-        <div class="sitemark s4">
-            <img src="assets/markery.png" alt="">
-        </div>
-        <div class="sitemark s5">
-            <img src="assets/markerr.png" alt="">
-        </div>
-        <div class="sitemark s6">
-            <img src="assets/markerb.png" alt="">
-        </div>
-        <div class="bookmark bk1"><a href="index.html">Back</a></div>
-        <div class="bookmark bk2"><a href="p2.html">2016/11</a></div>
-        <div class="bookmark bk3"><a href="p2.html">2016/10</a></div>
-        <div class="bookmark bk4"><a href="p2.html">2016/09</a></div>
-        <div class="bookmark bk5"><a href="p2.html">2016/08</a></div>
-        <div class="bookmark bk6"><a href="p2.html">2016/07</a></div>        
-        <div class="feedback"></div>
-
         
         
         <section class="header">
             <h1 align='center'>溫度的故事</h1>
-            <h3 align='center'>讓你和世界更近，近到能感覺溫度<img src="assets/fire.png" alt="" width="3%" height="5%"></h3>
+            <h3 align='center'>讓你和世界更近，近到能感覺溫度</h3>
         </section>
         
         <section class="story">
             
             <div class="mark">
-                <div class="comment">
-                    <input class="type" type="text">
-                </div>
                 <div class="like">
                     <img class="image" src="assets/white_heart.png" alt="" height="30" width="30">
                 </div>
+                <div class="comment">
+                    <input class="type" type="text">
+                </div>
             </div>
-
-
             <div class="content">
-
+                <div class="temperature"></div>
                 <div class="row">
-
                     <div class="col-lg-8 col-lg-offset-2">
-
                         <h1>華 慧 花 坊
                         <hr><a href="#">寒冷的故事</a></h1>
-
                         <p class="lead" id = "place"></p>
-
                         <p id="content"></p>
-                        <img class = "image" src = "assets/flower_shop.png" alt="">
-                    </div><!-- /.8 -->
-
-                </div> <!-- /.row-->
-            
-            </div> <!-- /.content-->
-            
-        </section>
-
-        <section class="map">
-
-            <div id="map"></div>
-
-            <div class="site">
-
-                <div class="bar timebar">
-                    <div class="line"></div>
-                </div>
-
-                <div class="bar colorbar">
-                    <div class="cblock cb1"></div>
-                    <div class="cblock cb2"></div>
-                    <div class="cblock cb3"></div>
-                    <div class="cblock cb4"></div>
-                </div>
-
-                <div class="add"></div>
-
-            </div>
-
-        
-        <!-- firebase script -->
-        <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyASwAm86mSJ3Egs28fuwa5frzyc66ofJQU",
-            authDomain: "temstory101.firebaseapp.com",
-            databaseURL: "https://temstory101.firebaseio.com",
-            storageBucket: "temstory101.appspot.com",
-            messagingSenderId: "866609204456"
-          };
-          firebase.initializeApp(config);
-
-          var content = document.getElementById("content");
-          var dbRef_content = firebase.database().ref().child("story/華慧花坊/main_story");
-          dbRef_content.on("value", snap => content.innerText = snap.val());
-
-          var place = document.getElementById("place");
-          var dbRef_place = firebase.database().ref().child("story/華慧花坊/place");
-          dbRef_place.on("value", snap => place.innerText = snap.val());
-        </script>
-
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpn5IBH6kh7nAAA4un4QLqyxl-fIXEvP0"></script>
-        <script src="js/dash.js"></script>
-    </body>
-</html>
+                        <img class = "content_img" src = "assets/flower_shop.png" alt="">
+                        </div><!-- /.8 -->
+                        </div> <!-- /.row-->
+                        
+                        </div> <!-- /.content-->
+                        
+                    </section>
+                    <section class="map">
+                        <div id="map"></div>
+                        <div class="site">
+                            <div class="bar timebar">
+                                <div class="line"></div>
+                            </div>
+                            <div class="bar colorbar">
+                                <div class="cblock cb1"></div>
+                                <div class="cblock cb2"></div>
+                                <div class="cblock cb3"></div>
+                                <div class="cblock cb4"></div>
+                            </div>
+                            <div class="add"></div>
+                        </div>
+                        
+                        <!-- firebase script -->
+                        <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+                        <script>
+                        // Initialize Firebase
+                        var config = {
+                        apiKey: "AIzaSyASwAm86mSJ3Egs28fuwa5frzyc66ofJQU",
+                        authDomain: "temstory101.firebaseapp.com",
+                        databaseURL: "https://temstory101.firebaseio.com",
+                        storageBucket: "temstory101.appspot.com",
+                        messagingSenderId: "866609204456"
+                        };
+                        firebase.initializeApp(config);
+                        var content = document.getElementById("content");
+                        var dbRef_content = firebase.database().ref().child("story/華慧花坊/main_story");
+                        dbRef_content.on("value", snap => content.innerText = snap.val());
+                        var place = document.getElementById("place");
+                        var dbRef_place = firebase.database().ref().child("story/華慧花坊/place");
+                        dbRef_place.on("value", snap => place.innerText = snap.val());
+                        </script>
+                        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpn5IBH6kh7nAAA4un4QLqyxl-fIXEvP0"></script>
+                        <script src="js/dash.js"></script>
+                    </body>
+                </html>

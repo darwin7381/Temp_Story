@@ -16,8 +16,8 @@ $(".arrow").click(function(){
         $(".comment").css("width",w/2);
         $(".comment").css("left",w/4);
         $(".like").css("left",(w/4)-50);
-        $(".bookmark").css("display","block")
-        $(".bookmark").css("left",w-70)
+        $(".bk").css("display","block")
+        $(".bk").css("left",w-70)
 
     }else{
 
@@ -29,7 +29,7 @@ $(".arrow").click(function(){
         $(".comment").css("width","");
         $(".comment").css("left","");
         $(".like").css("left","");
-        $(".bookmark").css("display","")
+        $(".bk").css("display","")
     }
 })
 
