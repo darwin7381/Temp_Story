@@ -5,7 +5,7 @@ $yellow: #FFC85B;
 $bgt: rgba(0, 0, 0, 0.5);
 
 @mixin shadow {
-    -webkit-box-shadow: 15px 15px 35px gray;
+    -webkit-box-shadow: 10px 8px 35px gray;
 }
 
 body {
@@ -98,7 +98,7 @@ section {
     width: 28%;
     left: 4%;
     box-sizing: border-box;
-    height: 83%;
+    height: 85%;
     overflow: auto;
     background-color: $bgt;
     padding: 30px;
@@ -115,7 +115,7 @@ section {
         height: 30px;
         width: 100%;
         position: fixed;
-        bottom: 8%;
+        bottom: 6.6%;
         z-index: 5;
         background-color: transparent;
         transition-duration: 0.7s;

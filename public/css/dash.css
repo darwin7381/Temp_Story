@@ -76,7 +76,7 @@ section {
   width: 28%;
   left: 4%;
   box-sizing: border-box;
-  height: 83%;
+  height: 85%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
@@ -85,13 +85,13 @@ section {
   z-index: 5;
   transition-duration: 0.7s;
   letter-spacing: 10px;
-  -webkit-box-shadow: 15px 15px 35px gray; }
+  -webkit-box-shadow: 10px 8px 35px gray; }
   .story .mark {
     background-color: #FFED97;
     height: 30px;
     width: 100%;
     position: fixed;
-    bottom: 8%;
+    bottom: 6.6%;
     z-index: 5;
     background-color: transparent;
     transition-duration: 0.7s; }
